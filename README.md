@@ -1,4 +1,5 @@
-# karma-easter-eggs
+# karma-log-reporter
+
 ## About
 This is a customized karma report that captures console log messages into file.
 It is inspired by [karma-json-log-reporter](https://www.npmjs.com/package/karma-json-log-reporter).
@@ -15,8 +16,8 @@ I created this report because I need a reporter that can log plain text.
 module.exports = function(config) {
   config.set({
     "logReporter": {
-      "outputPath": "test/some/path/",
-      "logFileName": "logfile.log"
+      "outputPath": "test/some/path/", // default name is current directory
+      "logFileName": "logfile.log" // default name is logFile_month_day_year_hr:min:sec.log
     },
     "plugins": [
       "karma-json-log-reporter"

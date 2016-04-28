@@ -3,14 +3,22 @@
 var fs = require( 'fs' );
 var path = require('path');
 
+var getDefaultFileName = function() {
+	var currentTime = new Date();
+	var currentTimeStr = currentTime.getMonth() + 1 + '_' + currentTime.getDate()
+		+ '_' + currentTime.getFullYear() + '_' + currentTime.getHours() + ':' + currentTime.getMinutes() + ':'
+		+ currentTime.getSeconds();
+	return currentTimeStr
+};
+
 var logReporter = function( config ) {
 
-	var currentTime = new Date().getTime();
 
-	var outputPath = config['outputPath'] ? config['outputPath'] : '';
-	var outputName = config['outputName'] ? config['outputName'] : 'logFile_' + currentTime + '.log';
 
-	var outputFile = path.join(outputPath, outputName)
+	var outputPath = config && config['outputPath'] ? config['outputPath'] : '';
+	var outputName = config && config['outputName'] ? config['outputName'] : 'logFile_' + getDefaultFileName() + '.log';
+
+	var outputFile = path.join(outputPath, outputName);
 
 	this.onBrowserLog = function( browser, log, type ) {
 

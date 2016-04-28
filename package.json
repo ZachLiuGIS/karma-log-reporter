@@ -1,7 +1,7 @@
 {
   "name": "karma-log-reporter",
   "description": "A simple customized karma log reporter that lets you capture console messages in tests into file.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Zach Liu",
   "license": "Apache-2.0",
   "repository": {

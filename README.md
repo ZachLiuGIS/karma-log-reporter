@@ -15,11 +15,11 @@ I created this report because I need a reporter that can log plain text.
 module.exports = function(config) {
   config.set({
     "logReporter": {
-        "outputPath": "test/some/path/",
-        "logFileName": "logfile.log"
+      "outputPath": "test/some/path/",
+      "logFileName": "logfile.log"
     },
     "plugins": [
-        "karma-json-log-reporter"
+      "karma-json-log-reporter"
     ],
     "reporters": ["log-reporter"]
   });

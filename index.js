@@ -33,8 +33,6 @@ var logReporter = function( config ) {
 				var obj = JSON.parse(log);
 				var keys = Object.keys(obj)
 
-				console.log(keys.indexOf('filter_key'))
-				console.log(keys.indexOf('message'))
 				if (keys.indexOf('filter_key') !== -1 && keys.indexOf('message') !== -1) {
 					if (obj['filter_key'] === config['filter_key']) {
 						log = obj.message;

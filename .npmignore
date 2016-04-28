@@ -4,3 +4,4 @@ node_modules
 .editorconfig
 .gitattributes
 .idea
+npm-debug.log

@@ -20,7 +20,7 @@ module.exports = function(config) {
       "logFileName": "logfile.log" // default name is logFile_month_day_year_hr:min:sec.log
     },
     "plugins": [
-      "karma-json-log-reporter"
+      "karma-log-reporter"
     ],
     "reporters": ["log-reporter"]
   });

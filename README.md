@@ -19,7 +19,7 @@ module.exports = function(config) {
   config.set({
     "logReporter": {
       "outputPath": "test/some/path/", // default name is current directory
-      "logFileName": "logfile.log" // default name is logFile_month_day_year_hr:min:sec.log
+      "outputName": "logfile.log" // default name is logFile_month_day_year_hr:min:sec.log
     },
     "plugins": [
       "karma-log-reporter"
@@ -41,7 +41,7 @@ module.exports = function(config) {
   config.set({
     "logReporter": {
       "outputPath": "test/some/path/",
-      "logFileName": "logfile.log",
+      "outputName": "logfile.log",
       "filter_key": "log-filter"
     },
 
